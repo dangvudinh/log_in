@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake log in</title>
+</head>
+<body>
+    <div id="title">
+        <h1 class="title">facebook</h1>
+        <h2 class="subtitle">Facebook giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h2>
+    </div>
+    
+    <div id="logInBox">
+        <input type="text" placeholder="Email hoặc số điện thoại" class="email">
+        <input type="text" placeholder="Mật khẩu" class="password">
+        <button class="logIn">Đăng Nhập</button>
+        <a href="index2.html" class="forgotPassword">Quên mật khẩu?</a>
+        <button class="newProfile">Tạo tài khoản mới</button>
+    </div>
+
+    <p class="description">
+        <a href="https://www.facebook.com/pages/create/?ref_type=registration_form" class="newPage">tạo trang</a>
+        <span>dành cho người nổi tiếng, thương hiệu hoặc doanh nghiệp.</span>
+    </p>
+    <script src="./main.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Indexed DB</title>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center">
+    <div class="col-md-6 mt-5" id="app">
+      <div class="input-group mb-5">
+        <input type="text" class="form-control" type="text" v-model="futureNote" @keyup.enter="addNote">
+        <span class="input-group-addon bg-primary text-white" @click="addNote">Add</span>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item" v-for="note in notes">
+          <span v-html="note.value.completed ? `<s>${note.value.content}</s>` : note.value.content"></span>
+          <span @click="markComplete(note.id)">(mark complete)</span>
+          <span @click="showNote(note.id)">(show)</span>
+          <span @click="deleteNote(note.id)">(x)</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>
